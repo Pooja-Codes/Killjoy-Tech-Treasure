@@ -32,6 +32,7 @@ public class CapsuleColliderKJMove : MonoBehaviour{
         cc.direction=1;
 
         Cursor.lockState=CursorLockMode.Locked;
+        //TODO: Camera.main for camera 
     }
 
     void Update()
@@ -41,8 +42,13 @@ public class CapsuleColliderKJMove : MonoBehaviour{
 
         moveDirection=new Vector3(-Horizontal,0.0f,-Vertical);
 
-       if(IsGrounded() && Input.GetButtonDown("Jump")){
+    //    if(IsGrounded() && Input.GetButtonDown("space")){
+    //          _Rigidbody.velocity=Vector3.up*jumpHeight;
+    //          Debug.Log("Jump Try");
+    //     }
+        if(Input.GetButtonDown("Jump")){
              _Rigidbody.velocity=Vector3.up*jumpHeight;
+             //Debug.Log("Jump Try");
         }
 
     }
@@ -53,13 +59,13 @@ public class CapsuleColliderKJMove : MonoBehaviour{
 
         turn.x+=Input.GetAxis("Mouse X")*sensitivity;
         turn.y+=Input.GetAxis("Mouse Y")*sensitivity;
-        transform.localRotation=Quaternion.Euler(0,turn.x,0);
+        transform.localRotation=Quaternion.Euler(0,turn.x+4,0);
 
     }
 
-    private bool IsGrounded(){
-        return Physics.Raycast(transform.position,Vector3.down,1.0f);
-    }
+    // private bool IsGrounded(){
+    //     return Physics.Raycast(transform.position,Vector3.down,1.0f);
+    // }
     void OnCollisionEnter(Collision col){
         if(col.gameObject.name=="Cube"){
             Destroy(col.gameObject);

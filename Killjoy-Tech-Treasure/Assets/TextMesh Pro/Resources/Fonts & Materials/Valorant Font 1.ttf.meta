@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 314224f581467174ba16095e7ceae5b8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - VALORANT
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 14eae905d798ade49b3d6f248bbddaf9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

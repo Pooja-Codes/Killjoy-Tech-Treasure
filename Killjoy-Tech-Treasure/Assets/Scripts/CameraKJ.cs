@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera:MonoBehaviour{
+public class CameraKJ:MonoBehaviour{
     // //the traget
    
     // public Transform targetObj;

@@ -328,7 +328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8611049994421641551, guid: 1806b9c0b55d729459ea8d578dcdc744, type: 3}
       propertyPath: entries
-      value: 
+      value: 97ed7a8b-55c1-4e9a-8605-b2d4a8ff23c0,d7224ecc-e552-4004-a4e7-956f956a8037
       objectReference: {fileID: 0}
     - target: {fileID: -8611049994421641551, guid: 1806b9c0b55d729459ea8d578dcdc744, type: 3}
       propertyPath: editorPreview

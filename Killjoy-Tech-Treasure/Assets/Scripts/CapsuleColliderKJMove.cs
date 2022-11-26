@@ -67,8 +67,10 @@ public class CapsuleColliderKJMove : MonoBehaviour{
     //     return Physics.Raycast(transform.position,Vector3.down,1.0f);
     // }
     void OnCollisionEnter(Collision col){
-        if(col.gameObject.name=="Cube"){
+        if(col.gameObject.name=="Lockdown.jpg"){
             Destroy(col.gameObject);
+            Score.totalscore++;
+            Debug.Log(Score.totalscore);
         }
     }
 }

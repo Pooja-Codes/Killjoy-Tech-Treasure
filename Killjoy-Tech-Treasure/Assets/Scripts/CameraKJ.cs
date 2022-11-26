@@ -45,24 +45,45 @@ public class CameraKJ:MonoBehaviour{
     //     }
     // }
 
-     //the traget
-    public Transform camTarget;
-    //default distance between target and the player
-    public Vector3 camereaOffset=new Vector3(-4,-5,-15);
-    public float rotationSpeed;
-    //public float pLerp=.02f;
-     public float pLerp=10f;
-    public float rLerp=0.1f;
-    void Start(){
-        camereaOffset=transform.position-camTarget.transform.position;
+// //previous start
+//      //the traget
+//     public Transform camTarget;
+//     //default distance between target and the player
+//     public Vector3 camereaOffset=new Vector3(-4,-5,-15);
+//     public float rotationSpeed;
+//     //public float pLerp=.02f;
+//      public float pLerp=10f;
+//     public float rLerp=0.1f;
+//     void Start(){
+//         camereaOffset=transform.position-camTarget.transform.position;
+//     }
+
+//     void LateUpdate(){
+//         //camereaOffset=transform.position-camTarget.transform.position;
+//         Vector3 newPosition=camTarget.transform.position+camereaOffset;
+//         transform.position=Vector3.Lerp(transform.position,newPosition,pLerp);
+//         transform.rotation=Quaternion.Lerp(transform.rotation,camTarget.rotation,rLerp);
+//     }
+// //previous end
+
+//new Start
+ //the traget
+    
+   public GameObject player;
+    public float cameraDistance = 35.0f;
+
+    // Use this for initialization
+    void Start () {
     }
 
-    void LateUpdate(){
-        //camereaOffset=transform.position-camTarget.transform.position;
-        Vector3 newPosition=camTarget.transform.position+camereaOffset;
-        transform.position=Vector3.Lerp(transform.position,newPosition,pLerp);
-        transform.rotation=Quaternion.Lerp(transform.rotation,camTarget.rotation,rLerp);
+    void LateUpdate ()
+    {
+        transform.position = player.transform.position - (player.transform.forward*-1) * cameraDistance;
+        transform.LookAt (player.transform.position);
+        transform.position = new Vector3 (transform.position.x, transform.position.y + 5, transform.position.z);
     }
+
+//new end
 
 }
 

@@ -1,0 +1,17 @@
+{
+    "name": "echo3d.echounitysdk",
+    "rootNamespace": "",
+    "references": [
+        "glTFast",
+        "KilljoyTechTreasure"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

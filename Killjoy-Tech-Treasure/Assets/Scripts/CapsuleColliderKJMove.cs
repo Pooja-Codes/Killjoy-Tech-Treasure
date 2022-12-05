@@ -7,7 +7,10 @@ public class CapsuleColliderKJMove : MonoBehaviour{
     public float radius;
     public float height;
     public int direction;
-    public float speed=0.4f;
+    //public float speed=0.4f;
+
+    public float speed = 30.0f;
+    public float rotationSpeed = 100.0f;
 
     private Rigidbody _Rigidbody;
 
@@ -37,10 +40,17 @@ public class CapsuleColliderKJMove : MonoBehaviour{
 
     void Update()
     {
-        float Horizontal=Input.GetAxis("Horizontal");
-        float Vertical=Input.GetAxis("Vertical");
+        // float Horizontal=Input.GetAxis("Horizontal");
+        // float Vertical=Input.GetAxis("Vertical");
 
-        moveDirection=new Vector3(-Horizontal,0.0f,-Vertical);
+        // if(Horizontal<0){
+        //     moveDirection=new Vector3(Horizontal,0.0f,-Vertical);
+        // }
+        // else{
+        //     moveDirection=new Vector3(-Horizontal,0.0f,-Vertical);
+
+        // }
+        //moveDirection=new Vector3(-Horizontal,0.0f,-Vertical);
 
     //    if(IsGrounded() && Input.GetButtonDown("space")){
     //          _Rigidbody.velocity=Vector3.up*jumpHeight;
@@ -55,7 +65,21 @@ public class CapsuleColliderKJMove : MonoBehaviour{
 
     private void FixedUpdate(){
         _Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-         _Rigidbody.position+=moveDirection*speed;
+         // Get the horizontal and vertical axis.
+        // By default they are mapped to the arrow keys.
+        // The value is in the range -1 to 1
+        float translation = Input.GetAxis("Vertical") * speed;
+        float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
+
+        // Make it move 10 meters per second instead of 10 meters per frame...
+        translation *= Time.deltaTime;
+        rotation *= Time.deltaTime;
+
+        // Move translation along the object's z-axis
+        transform.Translate(0, 0, -translation);
+
+        // Rotate around our y-axis
+        transform.Rotate(0, rotation, 0);
 
         turn.x+=Input.GetAxis("Mouse X")*sensitivity;
         turn.y+=Input.GetAxis("Mouse Y")*sensitivity;

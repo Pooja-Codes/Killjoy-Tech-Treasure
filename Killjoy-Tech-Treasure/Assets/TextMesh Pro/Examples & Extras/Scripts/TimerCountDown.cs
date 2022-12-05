@@ -21,8 +21,11 @@ public class TimerCountDown : MonoBehaviour
         float minutes=Mathf.FloorToInt(timer/60);
         float seconds=Mathf.FloorToInt(timer%60);
         timerText.text=string.Format("{0:00}:{1:00}",minutes,seconds)+"    "+"Tech Collected "+Score.totalscore+"/7 ";
-        if(timer<=0 || Score.totalscore==7 ){
-           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        if(timer<0){//lose
+           SceneManager.LoadScene(3);
+        }
+        if(Score.totalscore==1){//win
+            SceneManager.LoadScene(2);
         }
     }
 }

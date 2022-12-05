@@ -96,5 +96,10 @@ public class CapsuleColliderKJMove : MonoBehaviour{
             Score.totalscore++;
             Debug.Log(Score.totalscore);
         }
+         if(col.gameObject.name=="Vandal.glb"){
+            Destroy(col.gameObject);
+            Score.totalscore++;
+            Debug.Log(Score.totalscore);
+        }
     }
 }

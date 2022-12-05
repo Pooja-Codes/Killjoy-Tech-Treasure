@@ -7,6 +7,7 @@ public class CapsuleColliderKJMove : MonoBehaviour{
     public float radius;
     public float height;
     public int direction;
+    public static bool loadflag=false;
     //public float speed=0.4f;
 
     public float speed = 30.0f;
@@ -97,6 +98,31 @@ public class CapsuleColliderKJMove : MonoBehaviour{
             Debug.Log(Score.totalscore);
         }
          if(col.gameObject.name=="Vandal.glb"){
+            Destroy(col.gameObject);
+            Score.totalscore++;
+            Debug.Log(Score.totalscore);
+        }
+        if(col.gameObject.name=="Nanoswarms.jpg"){
+            Destroy(col.gameObject);
+            Score.totalscore++;
+            Debug.Log(Score.totalscore);
+        }
+         if(col.gameObject.name=="Alarmbot.jpeg"){
+            Destroy(col.gameObject);
+            Score.totalscore++;
+            Debug.Log(Score.totalscore);
+        }
+        if(col.gameObject.name=="Spike.glb"){
+            Destroy(col.gameObject);
+            Score.totalscore++;
+            Debug.Log(Score.totalscore);
+        }
+         if(col.gameObject.name=="Laptop.glb"){
+            Destroy(col.gameObject);
+            Score.totalscore++;
+            Debug.Log(Score.totalscore);
+        }
+        if(col.gameObject.name=="Turret.jpg"){
             Destroy(col.gameObject);
             Score.totalscore++;
             Debug.Log(Score.totalscore);

@@ -8,7 +8,7 @@ using TMPro;
 public class TimerCountDown : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    private float timer=100f;
+    private float timer=180f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,15 +17,17 @@ public class TimerCountDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer-=Time.deltaTime;
-        float minutes=Mathf.FloorToInt(timer/60);
-        float seconds=Mathf.FloorToInt(timer%60);
-        timerText.text=string.Format("{0:00}:{1:00}",minutes,seconds)+"    "+"Tech Collected "+Score.totalscore+"/7 ";
-        if(timer<0){//lose
-           SceneManager.LoadScene(3);
-        }
-        if(Score.totalscore==1){//win
-            SceneManager.LoadScene(2);
+        if(CapsuleColliderKJMove.loadflag){
+            timer-=Time.deltaTime;
+            float minutes=Mathf.FloorToInt(timer/60);
+            float seconds=Mathf.FloorToInt(timer%60);
+            timerText.text=string.Format("{0:00}:{1:00}",minutes,seconds)+"    "+"Tech Collected "+Score.totalscore+"/7 ";
+            if(timer<0){//lose
+            SceneManager.LoadScene(3);
+            }
+            if(Score.totalscore==7){//win
+                SceneManager.LoadScene(2);
+            }
         }
     }
 }

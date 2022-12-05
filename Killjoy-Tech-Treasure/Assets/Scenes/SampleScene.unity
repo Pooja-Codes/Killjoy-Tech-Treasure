@@ -396,8 +396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8611049994421641551, guid: 1806b9c0b55d729459ea8d578dcdc744, type: 3}
       propertyPath: entries
-      value: 97ed7a8b-55c1-4e9a-8605-b2d4a8ff23c0,d7224ecc-e552-4004-a4e7-956f956a8037,e4e3d43f-ad61-4d3f-97f9-3f243310be61,c8dfe452-9236-47ae-9840-1296590f9a17,08a3b29e-22d0-46bf-9055-8dcd758dfb4c,9e1afc34-555b-4cb5-b002-c6c879686b16,0a860b28-d2e6-4919-a453-3bd7a7c1e475,0c87c81e-ca4c-44eb-a8a0-d48a4a1d8dd2,
-        d52595c1-b379-4ff8-8c5e-cb4b6a8a415c
+      value: 97ed7a8b-55c1-4e9a-8605-b2d4a8ff23c0,d7224ecc-e552-4004-a4e7-956f956a8037,e4e3d43f-ad61-4d3f-97f9-3f243310be61,c8dfe452-9236-47ae-9840-1296590f9a17,08a3b29e-22d0-46bf-9055-8dcd758dfb4c,9e1afc34-555b-4cb5-b002-c6c879686b16,0a860b28-d2e6-4919-a453-3bd7a7c1e475,0c87c81e-ca4c-44eb-a8a0-d48a4a1d8dd2,f9a93357-855c-4634-9730-0f1bcde09031
       objectReference: {fileID: 0}
     - target: {fileID: -8611049994421641551, guid: 1806b9c0b55d729459ea8d578dcdc744, type: 3}
       propertyPath: editorPreview

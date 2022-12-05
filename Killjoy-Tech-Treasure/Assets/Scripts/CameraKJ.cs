@@ -69,18 +69,23 @@ public class CameraKJ:MonoBehaviour{
 //new Start
  //the traget
     
-   public GameObject player;
+    public GameObject player;
     public float cameraDistance = 35.0f;
 
-    // Use this for initialization
-    void Start () {
-    }
+    public AudioSource sound;
+    public static bool collisonFlag=false; 
 
+    // Use this for initialization
     void LateUpdate ()
     {
         transform.position = player.transform.position - (player.transform.forward*-1) * cameraDistance;
         transform.LookAt (player.transform.position);
         transform.position = new Vector3 (transform.position.x, transform.position.y + 5, transform.position.z);
+        if(collisonFlag==true){
+            sound=GetComponent<AudioSource>();
+            sound.Play();
+            collisonFlag=false;
+        }
     }
 
 //new end

@@ -45,6 +45,7 @@ public class CustomBehaviour : MonoBehaviour
         }
 
         Echo3DService.HologramStart();
+        
         if(this.gameObject.name=="Vandal.glb"){
             this.gameObject.AddComponent<CapsuleCollider>();
         }

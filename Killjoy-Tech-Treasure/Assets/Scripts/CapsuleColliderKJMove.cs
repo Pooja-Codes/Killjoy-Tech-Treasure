@@ -93,39 +93,39 @@ public class CapsuleColliderKJMove : MonoBehaviour{
     // }
     void OnCollisionEnter(Collision col){
         if(col.gameObject.name=="Lockdown.jpg"){
+            CameraKJ.collisonFlag=true;//to play sound
             Destroy(col.gameObject);
             Score.totalscore++;
-            Debug.Log(Score.totalscore);
         }
          if(col.gameObject.name=="Vandal.glb"){
+            CameraKJ.collisonFlag=true;//to play sound
             Destroy(col.gameObject);
             Score.totalscore++;
-            Debug.Log(Score.totalscore);
         }
         if(col.gameObject.name=="Nanoswarms.jpg"){
+            CameraKJ.collisonFlag=true;//to play sound
             Destroy(col.gameObject);
             Score.totalscore++;
-            Debug.Log(Score.totalscore);
         }
          if(col.gameObject.name=="Alarmbot.jpeg"){
+            CameraKJ.collisonFlag=true;//to play sound
             Destroy(col.gameObject);
             Score.totalscore++;
-            Debug.Log(Score.totalscore);
         }
         if(col.gameObject.name=="Spike.glb"){
+            CameraKJ.collisonFlag=true;//to play sound
             Destroy(col.gameObject);
             Score.totalscore++;
-            Debug.Log(Score.totalscore);
         }
          if(col.gameObject.name=="Laptop.glb"){
+            CameraKJ.collisonFlag=true;//to play sound
             Destroy(col.gameObject);
             Score.totalscore++;
-            Debug.Log(Score.totalscore);
         }
         if(col.gameObject.name=="Turret.jpg"){
+            CameraKJ.collisonFlag=true;//to play sound
             Destroy(col.gameObject);
             Score.totalscore++;
-            Debug.Log(Score.totalscore);
         }
     }
 }

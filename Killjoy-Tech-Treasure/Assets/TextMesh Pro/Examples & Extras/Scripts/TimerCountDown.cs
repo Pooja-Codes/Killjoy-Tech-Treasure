@@ -29,5 +29,8 @@ public class TimerCountDown : MonoBehaviour
                 SceneManager.LoadScene(2);
             }
         }
+        else{
+            timerText.text="Loading...";
+        }
     }
 }

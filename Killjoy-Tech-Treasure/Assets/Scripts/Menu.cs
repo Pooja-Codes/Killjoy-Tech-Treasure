@@ -20,6 +20,8 @@ public class Menu : MonoBehaviour
     }
 
     public void QuitGame(){
-        Application.Quit();
+        Debug.Log("Quit Clicked!");
+        UnityEditor.EditorApplication.isPlaying = false; //Quit
+        //Application.Quit();
     }
 }

@@ -8,7 +8,6 @@ public class CapsuleColliderKJMove : MonoBehaviour{
     public float height;
     public int direction;
     public static bool loadflag=false;
-    //public float speed=0.4f;
 
     public float speed = 30.0f;
     public float rotationSpeed = 100.0f;
@@ -17,13 +16,17 @@ public class CapsuleColliderKJMove : MonoBehaviour{
 
     Vector3 m_XAxis;
     Vector3 m_ZAxis;
-    public float jumpHeight=10.0f;
+    //public float jumpHeight=10.0f;
+    public Vector3 jump;
+    public float jumpForce = 1.5f;
+     
+         public bool isGrounded;
 
     public Vector2 turn;
     public float sensitivity=3f;
 
     CapsuleCollider cc;
-     Vector3 moveDirection;
+    Vector3 moveDirection;
 
     private void Awake(){
         TryGetComponent(out _Rigidbody);
@@ -36,33 +39,23 @@ public class CapsuleColliderKJMove : MonoBehaviour{
         cc.direction=1;
 
         Cursor.lockState=CursorLockMode.Locked;
-        //TODO: Camera.main for camera 
+       
+        Debug.Log(CameraKJ.collisonFlag);
+        jump = new Vector3(0.0f, 6.0f, 0.0f);
     }
 
     void Update()
     {
-        // float Horizontal=Input.GetAxis("Horizontal");
-        // float Vertical=Input.GetAxis("Vertical");
-
-        // if(Horizontal<0){
-        //     moveDirection=new Vector3(Horizontal,0.0f,-Vertical);
-        // }
-        // else{
-        //     moveDirection=new Vector3(-Horizontal,0.0f,-Vertical);
-
-        // }
-        //moveDirection=new Vector3(-Horizontal,0.0f,-Vertical);
-
-    //    if(IsGrounded() && Input.GetButtonDown("space")){
-    //          _Rigidbody.velocity=Vector3.up*jumpHeight;
-    //          Debug.Log("Jump Try");
-    //     }
-        if(Input.GetButtonDown("Jump")){
-             _Rigidbody.velocity=Vector3.up*jumpHeight;
-             //Debug.Log("Jump Try");
+        if(Input.GetButtonDown("Jump") && isGrounded){
+             //_Rigidbody.velocity=Vector3.up*jumpHeight;
+             _Rigidbody.AddForce(jump * jumpForce, ForceMode.Impulse);
+             isGrounded = false;
         }
-
     }
+     void OnCollisionStay()
+         {
+             isGrounded = true;
+         }
 
     private void FixedUpdate(){
         _Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
@@ -88,9 +81,6 @@ public class CapsuleColliderKJMove : MonoBehaviour{
 
     }
 
-    // private bool IsGrounded(){
-    //     return Physics.Raycast(transform.position,Vector3.down,1.0f);
-    // }
     void OnCollisionEnter(Collision col){
         if(col.gameObject.name=="Lockdown.jpg"){
             CameraKJ.collisonFlag=true;//to play sound

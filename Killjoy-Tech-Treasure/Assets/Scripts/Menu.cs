@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 {
     public void PlayGame(){
         Score.totalscore=0;
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);//simultaneously build scenes switch
         SceneManager.LoadScene(1);
     }
 
@@ -20,8 +20,12 @@ public class Menu : MonoBehaviour
     }
 
     public void QuitGame(){
-        Debug.Log("Quit Clicked!");
-        //UnityEditor.EditorApplication.isPlaying = false; //Quit
-        Application.Quit();
+        #if (UNITY_EDITOR)
+            UnityEditor.EditorApplication.isPlaying = false;
+        #elif (UNITY_STANDALONE) 
+            Application.Quit();
+        #elif (UNITY_WEBGL)
+            Application.OpenURL("about:blank");
+        #endif       
     }
 }

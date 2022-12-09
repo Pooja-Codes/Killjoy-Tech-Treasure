@@ -40,7 +40,7 @@ public class CapsuleColliderKJMove : MonoBehaviour{
 
         Cursor.lockState=CursorLockMode.Locked;
        
-        Debug.Log(CameraKJ.collisonFlag);
+        //Debug.Log(CameraKJ.collisonFlag);
         jump = new Vector3(0.0f, 6.0f, 0.0f);
     }
 

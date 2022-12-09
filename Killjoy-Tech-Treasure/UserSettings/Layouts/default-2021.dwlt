@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 65
+  controlID: 66
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 368
     height: 722.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: SceneHierarchyWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -94,15 +94,15 @@ MonoBehaviour:
     y: 420
     width: 1168
     height: 302.8
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 11}
   - {fileID: 15}
   - {fileID: 10}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 1
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 66
+  controlID: 77
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -259,7 +259,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: acdcfffff0dcffff10dfffff46dfffff76dfffffb0dfffffe2dfffff82e1ffffe0e1ffff2ce2ffff6ee2fffface2ffffeee2ffff2ce3ffff8ae3ffffd6e3ffff34e4ffff80e4ffffdce4ffff30e5ffff48e6ffff24e7fffff2e9ffff24edffff20f8ffffc8f8ffff8ef9fffff0f9ffff38fbffff00640000ca64000008650000c6650000f0660000266800007069000098690000
+      m_ExpandedIDs: 22cbffff1cccffff9eccffff9cd1ffff64d6ffffa4d6ffffc0d6ffffd2d6ffffe0d6fffff4d6ffff04d7ffff4ed8ffff8ed8ffff8cdaffffa0daffffaedaffffc8daffffd8daffffa2ddffffe2ddfffffeddffff10deffff1edeffff32deffff42deffff96dfffffd6dffffff2dfffff04e0ffff12e0ffff26e0ffff36e0ffff78e1ffffb8e1ffffd4e1ffffe6e1fffff4e1ffff08e2ffff18e2ffff5ae3ffff9ae3ffff98e5fffface5ffffbae5ffffd4e5ffffe4e5ffff10eaffff78ebffffbeebfffffcebffff48ecffff8aecffffc8ecffff14edffff72edffffb0edffff0eeeffff5aeeffff82efffffa0f0ffff18f2ffff4af3ffff48f6ffff22f7ffff18f8ffff38fbffff74620000d2630000ea6300001665000024650000406600007e66000088660000a08f00002890000014910000e49200003a930000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -324,22 +324,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Images
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Images
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GitHub\Killjoy-Tech-Treasure\Killjoy-Tech-Treasure
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e2620000
-    m_LastClickedID: 25314
-    m_ExpandedIDs: 00000000d8620000da620000ffffff7f
+    m_SelectedIDs: 28630000
+    m_LastClickedID: 25384
+    m_ExpandedIDs: 000000001a6300001c630000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -367,7 +367,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d8620000da620000
+    m_ExpandedIDs: 000000001a6300001c630000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -392,8 +392,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 22cbffff
+    m_LastClickedInstanceID: -13534
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000000000000c62000056620000
     m_RenameOverlay:
@@ -458,7 +458,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 433.59998
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -689,9 +689,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1269, y: 551, z: 0}
+    m_Target: {x: 124, y: 58, z: 0}
     speed: 2
-    m_Value: {x: 1269, y: 550.99994, z: 0.000018150637}
+    m_Value: {x: 124, y: 58, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -740,11 +740,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.075562224, y: -0.12144579, z: 0.009288535, w: -0.98971516}
     speed: 2
-    m_Value: {x: -0.077043585, y: -0.12142679, z: 0.009470339, w: -0.9895606}
+    m_Value: {x: -0.07555916, y: -0.121440865, z: 0.009288159, w: -0.98967505}
   m_Size:
-    m_Target: 815.5986
+    m_Target: 1029.8179
     speed: 2
-    m_Value: 815.5986
+    m_Value: 1029.8179
   m_Ortho:
     m_Target: 0
     speed: 2

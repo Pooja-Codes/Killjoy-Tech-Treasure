@@ -19,13 +19,19 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void CreditsGame(){
+        SceneManager.LoadScene(5);
+    }
+
     public void QuitGame(){
         #if (UNITY_EDITOR)
             UnityEditor.EditorApplication.isPlaying = false;
-        #elif (UNITY_STANDALONE) 
-            Application.Quit();
-        #elif (UNITY_WEBGL)
-            Application.OpenURL("about:blank");
+        #else
+             Application.Quit();
+        // #elif (UNITY_STANDALONE) 
+        //     Application.Quit();
+        // #elif (UNITY_WEBGL)
+        //     Application.OpenURL("about:blank");
         #endif       
     }
 }

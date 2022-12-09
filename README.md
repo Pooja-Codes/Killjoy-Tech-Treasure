@@ -35,6 +35,14 @@ https://user-images.githubusercontent.com/87775823/206806141-a33e329f-f049-4859-
   </tr>
 </table>
 
+* Open the Killjoy-Tech-Treasure sub folder in Unity.
+<table>
+ <tr>
+    <td><img src="https://user-images.githubusercontent.com/87775823/206810018-c2e6f37e-0439-430e-8104-ebecd37e3967.jpg" alt="OpenInUnity" width="300"/></td>
+  </tr>
+</table>
+
+
 * Open the _SampleScene_ scene in Unity.
 * [Set the API key](https://docs.echo3d.co/quickstart/access-the-console) and Entry IDs for those same models in the Inspector. <br>
 ![APIKeyandEntryId](https://user-images.githubusercontent.com/99516371/195749269-f7a43477-b67a-49e8-a212-6abdb9c948fd.png)<br>

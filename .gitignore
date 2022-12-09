@@ -2,8 +2,6 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-Echo3DHologram.cs
-Echo3DHologram.cs.meta
 .vsconfig
 /[Ll]ibrary/
 /[Tt]emp/

@@ -84,7 +84,7 @@ public class CustomBehaviour : MonoBehaviour
             }
         }
         if(this.gameObject.name =="Map.glb" && !(mapObjFlag1 || mapObjFlag2)){
-            Debug.Log("hello");
+            //Debug.Log("hello");
             mapComps = GetComponentsInChildren<MeshRenderer>();
             foreach (MeshRenderer comp in mapComps){
                 if(!comp.gameObject.GetComponent<MeshCollider>()){
@@ -97,7 +97,7 @@ public class CustomBehaviour : MonoBehaviour
                     }
                 }
             }
-            Debug.Log("end");  
+            //Debug.Log("end");  
         }
         if(this.gameObject.name =="Killjoy.glb" && !killjoyObjFlag  && mapObjFlag1 && mapObjFlag2){
             this.gameObject.GetComponent<Rigidbody>().useGravity = true;
